@@ -18,6 +18,7 @@ class QuantitySelectorComponent extends Component {
     if (!(event.target instanceof HTMLElement)) return;
 
     event.preventDefault();
+    event.currentTarget?.blur?.();
     this.refs.quantityInput.stepUp();
     this.#onQuantityChange();
     // Note: Swiper is initialized once on DOMContentLoaded in main-cart.liquid
@@ -32,6 +33,7 @@ class QuantitySelectorComponent extends Component {
     if (!(event.target instanceof HTMLElement)) return;
 
     event.preventDefault();
+    event.currentTarget?.blur?.();
     this.refs.quantityInput.stepDown();
     this.#onQuantityChange();
     // Note: Swiper is initialized once on DOMContentLoaded in main-cart.liquid
